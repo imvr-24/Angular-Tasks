@@ -4,7 +4,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.Emulated // Default Behavior
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
   title = 'basic-task';
@@ -20,5 +20,6 @@ export class AppComponent {
         phoneNumber: data.phoneNumber
       }
     );
+    console.log(this.detailsStore);
   }
 }

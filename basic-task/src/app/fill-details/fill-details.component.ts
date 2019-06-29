@@ -28,4 +28,11 @@ export class FillDetailsComponent implements OnInit {
     });
   }
 
+  clearData() {
+    this.firstName = '';
+    this.lastName = '';
+    this.email = '';
+    this.phoneNumber = '';
+  }
+
 }

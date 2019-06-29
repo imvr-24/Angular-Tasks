@@ -1,6 +1,7 @@
 {
   "name": "basic-task",
   "version": "0.0.0",
+  "homepage": "https://imvr-24.github.io/Angular-Tasks/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
