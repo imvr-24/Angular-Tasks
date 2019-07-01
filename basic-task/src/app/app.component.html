@@ -1,8 +1,8 @@
 <div class="container">
-  <div><app-header></app-header></div>
-  <app-fill-details (detailesFilled)="storeDetails($event)"></app-fill-details>
-  <hr>
-  <div class="row">
-    <app-show-details *ngFor="let detail of detailsStore" [data]="detail"></app-show-details>
+  <div>
+    <app-header></app-header>
   </div>
+  <hr>
+  <!-- <router-outlet></router-outlet> -->
+  <app-show-details></app-show-details>
 </div>

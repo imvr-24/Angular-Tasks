@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { FillDetailsComponent } from './fill-details/fill-details.component';
 import { HeaderComponent } from './header/header.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowDetailsComponent,
     FillDetailsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,

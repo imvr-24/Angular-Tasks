@@ -12,7 +12,7 @@ export class FillDetailsComponent implements OnInit {
   email = '';
   phoneNumber = '';
 
-  @Output() detailesFilled = new EventEmitter<{firstName:string, lastName: string, email: string, phoneNumber: string}>();
+  @Output() detailsFilled = new EventEmitter<{firstName:string, lastName: string, email: string, phoneNumber: string}>();
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class FillDetailsComponent implements OnInit {
   }
 
   emitDataToParent() {
-    this.detailesFilled.emit({
+    this.detailsFilled.emit({
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
