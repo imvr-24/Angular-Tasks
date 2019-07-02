@@ -16,7 +16,7 @@ const routes: Routes = [
     component: FillDetailsComponent
   },
   {
-    path: 'home',
+    path: 'features',
     component: FillDetailsComponent
   },
   {
@@ -24,7 +24,6 @@ const routes: Routes = [
     component: ResourcesComponent
   }
 ];
-
 @NgModule({
   declarations: [
     AppComponent,
