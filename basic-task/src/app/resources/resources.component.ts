@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesComponent implements OnInit {
 
+  resourcesA = [
+    {name: 'Angular Docs', referenceLink: 'https://angular.io/resources'},
+    {name: 'Alligator', referenceLink: 'https://alligator.io/resources/'},
+    {name: 'FreeCodeCamp', referenceLink: 'https://guide.freecodecamp.org/angular/'},
+  ];
+
   constructor() { }
 
   ngOnInit() {

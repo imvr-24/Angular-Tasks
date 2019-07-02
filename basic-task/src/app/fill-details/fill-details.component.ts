@@ -12,7 +12,7 @@ export class FillDetailsComponent implements OnInit {
   email = '';
   phoneNumber = '';
 
-  @Output() detailsFilled = new EventEmitter<{firstName:string, lastName: string, email: string, phoneNumber: string}>();
+  @Output() detailsFilled = new EventEmitter<{firstName: string, lastName: string, email: string, phoneNumber: string}>();
 
   constructor() { }
 

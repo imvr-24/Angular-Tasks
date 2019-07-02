@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Angular Resources
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let resource of resources">
+                <em>{{ resource.name }}</em>
+            <a [href]=resource.referenceLink target="_blank"><i class="fa fa-chevron-right px-1"></i></a>
+        </li>
+    </ul>
+</div>

@@ -2,12 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { FillDetailsComponent } from './fill-details/fill-details.component';
 import { HeaderComponent } from './header/header.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ListComponent } from './resources/list/list.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: FillDetailsComponent
+  },
+  {
+    path: 'home',
+    component: FillDetailsComponent
+  },
+  {
+    path: 'resources',
+    component: ResourcesComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -15,12 +31,13 @@ import { ResourcesComponent } from './resources/resources.component';
     ShowDetailsComponent,
     FillDetailsComponent,
     HeaderComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
