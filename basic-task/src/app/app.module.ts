@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'features',
-    component: FillDetailsComponent
+    component: ShowDetailsComponent
   },
   {
     path: 'resources',
