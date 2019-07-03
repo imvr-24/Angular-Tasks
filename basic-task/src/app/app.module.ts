@@ -10,29 +10,9 @@ import { ResourcesComponent } from './resources/resources.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './resources/list/list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: FillDetailsComponent
-  },
-  {
-    path: 'features',
-    component: ShowDetailsComponent
-  },
-  {
-    path: 'resources',
-    component: ResourcesComponent
-  },
-  {
-    path: 'page-not-found',
-    component: NotFoundComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'page-not-found'
-  }
-];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +26,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
