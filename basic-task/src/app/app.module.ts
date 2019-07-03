@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './resources/list/list.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,14 @@ const routes: Routes = [
   {
     path: 'resources',
     component: ResourcesComponent
+  },
+  {
+    path: 'page-not-found',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'page-not-found'
   }
 ];
 @NgModule({
@@ -31,7 +40,8 @@ const routes: Routes = [
     FillDetailsComponent,
     HeaderComponent,
     ResourcesComponent,
-    ListComponent
+    ListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
