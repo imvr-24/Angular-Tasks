@@ -4,6 +4,8 @@ import { FillDetailsComponent } from './fill-details/fill-details.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TodosComponent } from './todos/todos.component';
+import { TodoComponent } from './todos/todo/todo.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,10 @@ const routes: Routes = [
         path: 'resources',
         component: ResourcesComponent
     },
+    { path: 'todos', component: TodosComponent,
+        children: [
+            { path: ':id', component: TodoComponent }
+        ]},
     {
         path: 'page-not-found',
         component: NotFoundComponent

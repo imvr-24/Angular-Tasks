@@ -11,6 +11,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './resources/list/list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TodosComponent } from './todos/todos.component';
+import { TodoComponent } from './todos/todo/todo.component';
+import { TodosService } from './todos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,14 +25,17 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     ResourcesComponent,
     ListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TodosComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TodosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
