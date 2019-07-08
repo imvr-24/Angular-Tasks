@@ -1,34 +1,42 @@
 import { TodoModel } from './../../models/todo.model';
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { TodosService } from 'src/app/todos.service';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
-export class TodoComponent implements OnInit, OnDestroy {
+export class TodoComponent implements OnInit {
 
-  todo: {id: number};
-  paramSubscription;
+  // todo: {id: number};
+  // paramSubscription;
 
-  constructor(private route: ActivatedRoute) { }
+  @Input('sTodo') todos = [];
 
-  ngOnInit() {
-    this.todo = {
-      id: this.route.snapshot.params['id']
-    };
+  todoList: TodoModel[] = [];
+  selectedIndex: number;
+  completedTodos = 0;
 
-    this.paramSubscription = this.route.params.subscribe(
-      (params: Params) => {
-        this.todo.id = params.id;
-      }
-      );
-    }
+  constructor(private todoService: TodosService) { }
 
-    ngOnDestroy() {
-      this.paramSubscription.unsubscribe();
-    }
+  ngOnInit() { }
+
+
+
+  public setDivIndex(index: number) {
+    this.selectedIndex = index;
+  }
+
+  markAsDone(index: number) {
+    this.completedTodos++;
+    console.log(this.todos[index]);
+    this.todos.splice(index, 1);
+    console.log('Deleted :' + this.todos[index]);
+    this.todoService.completedTodos.next(this.completedTodos);
+  }
+
   }
 
 

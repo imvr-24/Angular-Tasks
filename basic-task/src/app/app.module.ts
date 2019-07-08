@@ -15,6 +15,8 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';
 import { TodosService } from './todos.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
+import { PostComponent } from './posts/post/post.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     NotFoundComponent,
     TodosComponent,
-    TodoComponent
+    TodoComponent,
+    PostsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TodosService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

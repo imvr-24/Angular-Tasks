@@ -6,6 +6,8 @@ import { ResourcesComponent } from './resources/resources.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';
+import { PostsComponent } from './posts/posts.component';
+
 
 
 const routes: Routes = [
@@ -24,7 +26,11 @@ const routes: Routes = [
     { path: 'todos', component: TodosComponent,
         children: [
             { path: ':id', component: TodoComponent }
-        ]},
+        ]
+    },
+    {
+        path: 'posts', component: PostsComponent
+    },
     {
         path: 'page-not-found',
         component: NotFoundComponent

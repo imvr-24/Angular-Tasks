@@ -1,4 +1,4 @@
-export class TodoModel {
+export interface TodoModel {
     userId: number;
     id: number;
     title: string;
