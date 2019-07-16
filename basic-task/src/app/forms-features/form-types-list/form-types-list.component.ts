@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FormTypesListComponent implements OnInit {
 
-  formTypes = ['Template Driven'];
+  formTypes = ['Template Driven', 'Reactive'];
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 

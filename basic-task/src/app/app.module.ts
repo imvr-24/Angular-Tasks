@@ -13,6 +13,7 @@ import { TodoComponent } from './todos/todo/todo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PostComponent } from './posts/post/post.component';
     TodosComponent,
     TodoComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

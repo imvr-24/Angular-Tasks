@@ -15,6 +15,7 @@ export class TodosComponent implements OnInit, OnDestroy, OnChanges {
   todos: TodoModel[] = [];
 
   noOfTodos = 0;
+  showSpinner = true;
 
   private activatedSubscription: Subscription;
 
@@ -32,7 +33,10 @@ export class TodosComponent implements OnInit, OnDestroy, OnChanges {
 
   getUsers(): void {
     this.todoService.getTodos()
-    .subscribe(todo => this.todos = todo.filter(tod => tod.completed === false));
+    .subscribe(todo => {
+      this.todos = todo.filter(tod => tod.completed === false);
+      this.showSpinner = false;
+    });
   }
 
   ngOnDestroy() {

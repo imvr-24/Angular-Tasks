@@ -10,6 +10,6 @@
         <button class="btn btn-success" (click)="navigateToPosts()">Display Posts</button>
     </div>
 
-
+    <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
     <app-todo [sTodo]="todos"></app-todo>
 </div>

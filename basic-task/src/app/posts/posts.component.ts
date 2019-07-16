@@ -12,6 +12,8 @@ export class PostsComponent implements OnInit {
 
   posts: PostModel[] = [];
   name =  'veera';
+  showSpinner = true;
+
   constructor( private postsService: PostsService, private router: Router) { }
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class PostsComponent implements OnInit {
   getPosts() {
     this.postsService.getPosts()
       .subscribe(post => {
+        this.showSpinner = false;
         return this.posts = post;
       });
   }
@@ -30,5 +33,4 @@ export class PostsComponent implements OnInit {
     console.log(this.posts.length);
     this.router.navigate(['/todos']);
   }
-
 }

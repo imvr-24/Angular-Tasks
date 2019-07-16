@@ -4,9 +4,9 @@
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item" *ngFor="let formType of formTypes; let i = index">
-                <a style="cursor: pointer" (click)="navigateTo('tdf')">
+            <strong [routerLink]="['tdf']" routerLinkActive="true">  <a style="cursor: pointer">
                     <em>{{ formType }}</em>
-                </a>
+                </a></strong>    
         </li>
     </ul>
 </div>
