@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Types of Forms in angular
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let formType of formTypes; let i = index">
+                <a style="cursor: pointer" (click)="navigateTo('tdf')">
+                    <em>{{ formType }}</em>
+                </a>
+        </li>
+    </ul>
+</div>
