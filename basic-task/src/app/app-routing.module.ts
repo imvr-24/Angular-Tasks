@@ -5,6 +5,7 @@ import { ShowDetailsComponent } from './show-details/show-details.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';
 import { PostsComponent } from './posts/posts.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -34,14 +35,14 @@ const routes: Routes = [
     {
         path: 'posts', component: PostsComponent
     },
-    // {
-    //     path: 'page-not-found',
-    //     component: NotFoundComponent
-    // },
-    // {
-    //     path: '**',
-    //     redirectTo: 'page-not-found'
-    // }
+    {
+        path: 'page-not-found',
+        component: NotFoundComponent
+    },
+    {
+        path: '**',
+        redirectTo: 'page-not-found'
+    }
 ];
 
 @NgModule({

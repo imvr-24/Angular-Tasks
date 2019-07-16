@@ -49,7 +49,7 @@ export class TemplateDrivenComponent  {
 
   // Using Form Data.
 
-  onSubmit(form: NgForm) {
+  onSubmit() {
     this.userSubmitted = true;
     console.log(this.signUpForm);
     this.user.username = this.signUpForm.value.userData.username;
