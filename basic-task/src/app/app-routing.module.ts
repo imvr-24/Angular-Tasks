@@ -6,6 +6,8 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';
 import { PostsComponent } from './posts/posts.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NetworkAwarePreloadStrategyService } from './network-aware-preload-strategy.service';
+import { CustomPreloaderService } from './custom-preloader.service';
 
 
 
@@ -20,7 +22,8 @@ const routes: Routes = [
     },
     {
         path: 'resources',
-        loadChildren: './resources-list/resources-list.module#ResourcesListModule'
+        loadChildren: './resources-list/resources-list.module#ResourcesListModule',
+        data: { preload: true }  // Custom property we will use to track what route to be preloaded
     },
     {
         path: 'forms',
@@ -47,7 +50,11 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { useHash: true, preloadingStrategy: PreloadAllModules })
+        RouterModule.forRoot(routes, { useHash: true,
+            preloadingStrategy: CustomPreloaderService
+            // preloadingStrategy: NetworkAwarePreloadStrategyService
+            // preloadingStrategy: PreloadAllModules
+        })
     ],
     exports: [RouterModule]
 })
