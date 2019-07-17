@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod ",
+    "build": "ng build --prod --baseHref=/Angular-Tasks/ --outputPath=dist/Angular-Tasks",
     "firebase-build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
