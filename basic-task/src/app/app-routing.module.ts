@@ -8,13 +8,14 @@ import { PostsComponent } from './posts/posts.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NetworkAwarePreloadStrategyService } from './network-aware-preload-strategy.service';
 import { CustomPreloaderService } from './custom-preloader.service';
+import { NewsApiComponent } from './news-api/news-api.component';
 
 
 
 const routes: Routes = [
     {
         path: '',
-        component: FillDetailsComponent
+        component: NewsApiComponent
     },
     {
         path: 'features',
@@ -27,7 +28,7 @@ const routes: Routes = [
     },
     {
         path: 'forms',
-        loadChildren:  () => import('./forms-features/forms-features.module').then(module => module.FormsFeaturesModule)
+        loadChildren: () => import('./forms-features/forms-features.module').then(module => module.FormsFeaturesModule)
     },
     {
         path: 'todos', component: TodosComponent,
@@ -50,10 +51,12 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { useHash: true,
-            preloadingStrategy: CustomPreloaderService
+        RouterModule.forRoot(routes, {
+            useHash: true,
+            // preloadingStrategy: CustomPreloaderService
             // preloadingStrategy: NetworkAwarePreloadStrategyService
-            // preloadingStrategy: PreloadAllModules
+            // preloadingStrategy: PreloadAllModules,
+            // enableTracing: true
         })
     ],
     exports: [RouterModule]

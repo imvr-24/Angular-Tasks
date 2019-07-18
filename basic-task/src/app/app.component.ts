@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
-  title = 'basic-task';
+  title = 'ng-tasks';
 
 
 }

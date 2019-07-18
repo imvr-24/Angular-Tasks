@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+import { NewsApiModule } from './news-api/news-api.module';
+import { FormsFeaturesModule } from './forms-features/forms-features.module';
+import { ResourcesListModule } from './resources-list/resources-list.module';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.co
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NewsApiModule,
+    // FormsFeaturesModule,
+    // ResourcesListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

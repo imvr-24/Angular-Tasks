@@ -1,0 +1,6 @@
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<div class="row">
+    <div class=" col-md-6 col-lg-4 col-xs-2" *ngFor="let item of news">
+        <app-news-card-list [news]="item"></app-news-card-list>
+    </div>
+</div>
