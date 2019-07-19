@@ -3,7 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewsApiComponent } from './news-api.component';
 
 const routes: Routes = [
-
+  {
+    path: '',
+    component: NewsApiComponent,
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

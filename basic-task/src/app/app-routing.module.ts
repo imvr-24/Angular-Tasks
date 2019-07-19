@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules, PreloadingStrategy } from '@angular/router';
-import { FillDetailsComponent } from './fill-details/fill-details.component';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';
@@ -13,10 +12,7 @@ import { NewsApiComponent } from './news-api/news-api.component';
 
 
 const routes: Routes = [
-    {
-        path: '',
-        component: NewsApiComponent
-    },
+
     {
         path: 'features',
         component: ShowDetailsComponent

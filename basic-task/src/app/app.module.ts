@@ -15,9 +15,6 @@ import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './posts/post/post.component';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 import { NewsApiModule } from './news-api/news-api.module';
-import { FormsFeaturesModule } from './forms-features/forms-features.module';
-import { ResourcesListModule } from './resources-list/resources-list.module';
-
 
 @NgModule({
   declarations: [
@@ -35,11 +32,9 @@ import { ResourcesListModule } from './resources-list/resources-list.module';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
     NewsApiModule,
-    // FormsFeaturesModule,
-    // ResourcesListModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
