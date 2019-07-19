@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
+import { PaginationService } from '../pagination.service';
 
 @Component({
   selector: 'app-news-api',
@@ -10,7 +11,15 @@ export class NewsApiComponent implements OnInit {
 
   news = [];
   showSpinner = true;
-  constructor(private newsService: NewsService) { }
+  private allItems = [];
+
+  // pager object.
+  pager: any = {};
+
+  // paged items
+  pagedItems: any[];
+
+  constructor(private newsService: NewsService, private pagerService: PaginationService) { }
 
   ngOnInit() {
     setTimeout(() => {
@@ -20,8 +29,20 @@ export class NewsApiComponent implements OnInit {
 
   getNews() {
     this.newsService.getTopHeadlines().subscribe(latestNews => {
+      this.allItems = latestNews['articles'];
       this.showSpinner = false;
-      return this.news = latestNews['articles'];
+      this.news = latestNews['articles'];
+      this.setPage(1);
+      console.log(this.pagedItems);
+      console.log(this.pager);
     });
   }
+  setPage(page: number) {
+    // get pager object from service
+    this.pager = this.pagerService.getPager(this.allItems.length, page);
+
+    // get current page of items
+    this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+  }
+
 }

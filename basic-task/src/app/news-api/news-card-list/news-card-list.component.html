@@ -1,5 +1,5 @@
 <div class="card mx-2 my-2" style="width: 18rem;">
-    <img class="card-img-top" style="max-height: 200px;" [src]="news.urlToImage" alt="Card image cap">
+    <img class="card-img-top" style="max-height: 200px;" [src]="news.urlToImage !== null ? news.urlToImage: defaultImage.newsImg" alt="Card image cap">
     <div class="card-body">
         <p class="card-text">{{ news.title }}</p>
     </div>

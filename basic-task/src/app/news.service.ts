@@ -13,7 +13,7 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   getTopHeadlines() {
-    return this.http.get(`${this.BASE_URL}${this.ENDPOINTS[0]}?country=us&apiKey=${this.apiKey}`);
+    return this.http.get(`${this.BASE_URL}${this.ENDPOINTS[1]}?q=bcci&pageSize=100&apiKey=${this.apiKey}`);
   }
 
 }
