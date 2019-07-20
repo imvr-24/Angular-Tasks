@@ -10,7 +10,7 @@ export class NewsCardListComponent implements OnInit {
   constructor() { }
 
   defaultImage = {
-    newsImg : '../../../assets/news.jpg'
+    newsImg : '../../../assets/news.jpg' 
   };
 
   @Input() news;
