@@ -33,6 +33,7 @@ export class NewsApiComponent implements OnInit {
       this.showSpinner = false;
       this.news = latestNews['articles'];
       this.setPage(1);
+      console.log(this.pager.pages && this.pager.pages.length);
       console.log(this.pagedItems);
       console.log(this.pager);
     });
@@ -40,7 +41,7 @@ export class NewsApiComponent implements OnInit {
   setPage(page: number) {
     // get pager object from service
     this.pager = this.pagerService.getPager(this.allItems.length, page);
-
+    console.log(this.pager);
     // get current page of items
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
   }
