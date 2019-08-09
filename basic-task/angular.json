@@ -43,7 +43,8 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/app.json"
             ],
             "styles": [
               "src/styles.css"

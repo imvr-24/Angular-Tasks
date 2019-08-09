@@ -1,0 +1,15 @@
+
+
+
+{
+    "name": "Sample",
+    "version": "0.0.6",
+    "displayName": "Next-Generation Microsoft Office Interactive Templates",
+    "description": "Next-Generation Microsoft Office Interactive Templates",
+    "type": "WebApp",
+    "defaultPlatform": "NodeJS",
+    "label": "V6",
+    "concurrent": true,
+    "defaultPage": "index.html"
+    
+}
